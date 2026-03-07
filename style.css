@@ -163,4 +163,60 @@ transform:translate(-50%, -50%) scale(1.05);
 transform:translate(-50%, -50%) scale(1);
 }
 
+
+}
+/* ========================= */
+/* RESPONSIVE PARA CELULARES */
+/* ========================= */
+
+@media (max-width: 768px){
+
+.title{
+font-size:28px;
+top:10px;
+}
+
+.side-text{
+position:relative;
+width:80%;
+margin:auto;
+text-align:center;
+top:0;
+left:0;
+right:0;
+font-size:16px;
+margin-top:70px;
+}
+
+/* mover textos arriba */
+
+.left{
+margin-top:80px;
+}
+
+.right{
+margin-top:20px;
+}
+
+/* ositos más pequeños */
+
+.boy{
+width:120px;
+left:10px;
+bottom:10px;
+}
+
+.girl{
+width:120px;
+right:10px;
+bottom:10px;
+}
+
+/* foto central más pequeña */
+
+.center-photo{
+width:90px;
+height:90px;
+}
+
 }
