@@ -220,3 +220,24 @@ height:90px;
 }
 
 }
+/* AJUSTE SOLO PARA MOVIL */
+
+@media (max-width: 768px) {
+
+.center-photo{
+
+top: 58%;   /* baja la foto dentro del corazón */
+
+width: 95px;
+height: 95px;
+
+}
+
+.center-photo img{
+
+width: 95px;
+height: 95px;
+
+}
+
+}
