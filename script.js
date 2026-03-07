@@ -35,7 +35,7 @@ let messagesStarted = false;
 /* CONFIG */
 
 const HEART_POINTS = 300;
-const HEART_SCALE = 15;
+const HEART_SCALE = window.innerWidth < 768 ? 11 : 15;
 
 /* ECUACION DEL CORAZON */
 
@@ -64,7 +64,7 @@ let t=Math.random()*Math.PI*2;
 
 let pos=heart(t);
 
-let offsetY = window.innerWidth < 768 ? 120 : 0;
+let offsetY = window.innerWidth < 768 ? 40 : 0;
 
 targets.push({
 
@@ -682,5 +682,6 @@ document.removeEventListener("click", startMusic);
 }
 
 document.addEventListener("click", startMusic);
+
 
 
