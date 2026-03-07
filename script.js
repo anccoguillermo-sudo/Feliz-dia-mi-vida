@@ -35,7 +35,17 @@ let messagesStarted = false;
 /* CONFIG */
 
 const HEART_POINTS = 300;
-const HEART_SCALE = 15;
+let HEART_SCALE;
+
+if(window.innerWidth < 768){
+
+HEART_SCALE = 9; // tamaño para móvil
+
+}else{
+
+HEART_SCALE = 15; // tamaño para PC
+
+}
 
 /* ECUACION DEL CORAZON */
 
@@ -66,8 +76,10 @@ let pos=heart(t);
 
 targets.push({
 
-x:canvas.width/2 + pos.x*HEART_SCALE,
-y:canvas.height/2 - pos.y*HEART_SCALE
+let offsetY = window.innerWidth < 768 ? 140 : 0;
+
+x: canvas.width/2 + pos.x * HEART_SCALE,
+y: canvas.height/2 + offsetY - pos.y * HEART_SCALE
 
 })
 
@@ -680,3 +692,4 @@ document.removeEventListener("click", startMusic);
 }
 
 document.addEventListener("click", startMusic);
+
