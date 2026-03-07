@@ -670,4 +670,13 @@ typeWriter(
 40
 );
 
+
 }
+const music = document.getElementById("music");
+
+function startMusic(){
+music.play().catch(()=>{});
+document.removeEventListener("click", startMusic);
+}
+
+document.addEventListener("click", startMusic);
