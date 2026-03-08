@@ -133,10 +133,14 @@ let target=targets[targetIndex];
 
 let fromLeft=Math.random()>0.5;
 
-particles.push({
+let startXLeft = canvas.width * 0.18;
+let startXRight = canvas.width * 0.82;
+let startY = canvas.height - 110;
 
-x:fromLeft?220:canvas.width-220,
-y:canvas.height-120,
+particles.push({
+  
+x: fromLeft ? startXLeft : startXRight,
+y: startY,
 
 targetX:target.x,
 targetY:target.y,
@@ -682,6 +686,7 @@ document.removeEventListener("click", startMusic);
 }
 
 document.addEventListener("click", startMusic);
+
 
 
 
