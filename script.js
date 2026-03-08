@@ -134,8 +134,14 @@ let target=targets[targetIndex];
 let fromLeft=Math.random()>0.5;
 
 let startXLeft = canvas.width * 0.18;
+
 let startXRight = canvas.width * 0.82;
-let startY = canvas.height - 110;
+
+/* altura diferente para dispositivos móveis */
+
+let startY = window.innerWidth < 768 
+? canvas.height - 70 
+: canvas.height - 110;
 
 particles.push({
   
@@ -686,6 +692,7 @@ document.removeEventListener("click", startMusic);
 }
 
 document.addEventListener("click", startMusic);
+
 
 
 
